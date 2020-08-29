@@ -1,4 +1,4 @@
-ARG version=0.20.0
+ARG version=0.20.1
 
 FROM debian:buster as stage1
 ARG version
