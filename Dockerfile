@@ -16,4 +16,4 @@ COPY --from=stage1 /the/workdir/bitcoin-${version}/bin/bitcoind /app/bitcoind
 ENV PRUNE 10000
 EXPOSE 8332
 VOLUME /data
-ENTRYPOINT /app/bitcoind -datadir=/data -server -rpcport=8332 -rpcuser=bitcoin -rpcpassword=password -prune="$PRUNE"
+ENTRYPOINT /app/bitcoind -datadir=/data -server -rpcbind=0.0.0.0 -rpcallowip=127.0.0.1 -rpcport=8332 -rpcuser=bitcoin -rpcpassword=password -prune="$PRUNE"
