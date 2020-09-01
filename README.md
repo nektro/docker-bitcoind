@@ -10,3 +10,11 @@ Dockerized Bitcoin Daemon
 https://bitcoin.org/en/
 
 https://bitcoincore.org/
+
+| Key | Value |
+|-----|-------|
+| Version | `0.20.1` |
+| Volume | `/data` |
+| RPC Port | `8332` |
+| RPC User | `bitcoin` |
+| RPC Pass | `password` |
