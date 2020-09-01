@@ -11,6 +11,8 @@ https://bitcoin.org/en/
 
 https://bitcoincore.org/
 
+https://github.com/bitcoin/bitcoin/releases
+
 | Key | Value |
 |-----|-------|
 | Version | `0.20.1` |
