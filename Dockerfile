@@ -13,6 +13,7 @@ RUN chmod +x /the/workdir/bitcoin-${version}/bin/bitcoind
 FROM photon
 ARG version
 COPY --from=stage1 /the/workdir/bitcoin-${version}/bin/bitcoind /app/bitcoind
+ENV PRUNE 10000
 EXPOSE 8332
 VOLUME /data
-ENTRYPOINT [ "/app/bitcoind", "-datadir=/data", "-server", "-rpcport=8332", "-rpcuser=bitcoin", "-rpcpassword=password" ]
+ENTRYPOINT /app/bitcoind -datadir=/data -server -rpcport=8332 -rpcuser=bitcoin -rpcpassword=password -prune="$PRUNE"
